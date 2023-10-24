@@ -14,6 +14,9 @@ class M_data extends CI_model {
         return $this->db->get_where($table,$where);
 
     }
+    function get_data_by_id($where, $table) {
+        return $this->db->get_where($table, $where)->row();
+    }
 
     function update_data($where,$data,$table){
         $this->db->where($where);
